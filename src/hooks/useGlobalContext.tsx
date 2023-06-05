@@ -89,9 +89,9 @@ const useGlobal = () => {
           setIsLoading(true)
           setTimeout(() => {
             setIsLoading(false)
-          }, 1500)
+          }, 2250)
      }
-
+    
     const finishGame=()=>{
         setEndGame(true)
         checkAnswer()
