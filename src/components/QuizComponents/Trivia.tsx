@@ -9,6 +9,8 @@ const Trivia = () => {
 
     const {trivia,endGame }=useGlobalContext()!
   return (
+
+    
     <Fragment>{
     trivia.map(({ question, category, answers, answeredCorrectly }: any, index: number) => (
         <div className='flex-col' key={nanoid()}>
