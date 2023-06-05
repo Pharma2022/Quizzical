@@ -1,10 +1,10 @@
-import React from 'react'
-import { Children } from '../../hooks/useGlobalContext'
+import {  useGlobalContext } from '../../hooks/useGlobalContext'
 
 
-const Score = ({children}: Children) => {
+const Score = () => {
+  const {score,trivia}=useGlobalContext()!
   return (
-    <p className='score'>{children}</p>
+    <p className='score'>You scored {score}/{trivia.length}</p>
   )
 }
 

@@ -11,11 +11,10 @@ import ClipLoader from "react-spinners/ClipLoader"
 const override: CSSProperties = {
   display: "block",
   margin: "5rem auto",
-  // borderColor: "red",
 };
 
 const Quiz = () => {
-    const { trivia, score, endGame,isLoading } = useGlobalContext()!
+    const { trivia, endGame,isLoading } = useGlobalContext()!
     
     return (
       <div className='quiz container flex-col'>
@@ -38,26 +37,23 @@ const Quiz = () => {
               <Question question={question} questionNum={index + 1} category={category} />
               <div className='answers-container flex-row wrap'>
                 {answers.map(({ answer, isHeld, isCorrect, questionId, id }: Answer) => (
-                  <Ans
-                    questionId={questionId}
-                    key={id}
-                    isHeld={isHeld}
-                    isCorrect={isCorrect}
-                    answer={answer}
-                    id={id}
-                  />
+                  <Ans    questionId={questionId}
+                          key={id}
+                          isHeld={isHeld}
+                          isCorrect={isCorrect}
+                          answer={answer}
+                          id={id} />
                 ))}
               </div>
               {endGame && (
-                <AnswerMessage
-                  answeredCorrectly={answeredCorrectly}
+                <AnswerMessage  answeredCorrectly={answeredCorrectly}
                   rightAnswer={answers.find(({ isCorrect }: Answer) => isCorrect)?.answer || ''}
                 />
               )}
               <hr />
             </div>
           ))}
-          {endGame && <Score>You scored {score}/{trivia.length}</Score>}
+          {endGame && <Score/>}
           {!isLoading&&<CheckAnswerButton />}
         </div>
       </div>
