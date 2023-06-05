@@ -130,7 +130,7 @@ select{
 }
 .quiz-trivia{
   padding-block:2rem 1rem;
-  padding-inline: 1rem;
+  padding-inline: 1rem 1.25rem;
   
 }
 .answers-container{
