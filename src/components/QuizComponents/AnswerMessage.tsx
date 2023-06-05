@@ -7,7 +7,7 @@ type AnswerMessageProps = {
 }
 
 const AnswerMessage = ({answeredCorrectly,rightAnswer}: AnswerMessageProps) => {
-  return (
+    return (
 
     
     <p>{answeredCorrectly?<span className='correct'>Correct!</span> : 
