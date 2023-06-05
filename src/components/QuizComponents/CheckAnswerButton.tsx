@@ -1,4 +1,3 @@
-import React from 'react'
 import { useGlobalContext } from '../../hooks/useGlobalContext'
 import { Link } from 'react-router-dom'
 

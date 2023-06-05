@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 
-type Props = {
+type AnswerMessageProps = {
     answeredCorrectly:boolean
     rightAnswer:string
    
 }
 
-const AnswerMessage = ({answeredCorrectly,rightAnswer}: Props) => {
+const AnswerMessage = ({answeredCorrectly,rightAnswer}: AnswerMessageProps) => {
   return (
 
     

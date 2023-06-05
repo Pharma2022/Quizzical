@@ -29,7 +29,7 @@ type TriviaItem = {
 type GlobalContextType = {
   form: FormState;
   handleChange: (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
-  clearForm:()=>void
+  
   startGame:()=>void
   finishGame:()=>void
   newGame:()=>void
@@ -147,7 +147,7 @@ const useGlobal = () => {
 
           
 
-            return { form,url,trivia ,handleChange,clearForm,endGame,startGame,finishGame,newGame,holdAnswer,checkAnswer,score,getScore,isAnswered,isLoading };
+            return { form,url,trivia ,handleChange,endGame,startGame,finishGame,newGame,holdAnswer,checkAnswer,score,getScore,isAnswered,isLoading };
           };
 
 export const GlobalContextProvider = ({ children }: Children) => {
