@@ -107,44 +107,40 @@ const useGlobal = () => {
      /*Hold Answers,Check Answers and  Score Quiz */
 
     const holdAnswer=(ID:string,questionId:string)=>{
-          setTrivia(prev=>prev.map((item):TriviaItem=>
-            
-            item.id===questionId?
-                  (
-                    {...item,
-                      answers:item.answers.map(ans=>
-                        ( {...ans,
-                          isHeld:ans.id===ID? !ans.isHeld:false
-                            }
-                        ))
-                    }
-                  )
-            :item
-            ))}
+          setTrivia(prev=>prev.map((item):TriviaItem=>        
+                  item.id===questionId?
+                        ( {...item,
+                            answers:item.answers.map(ans=>
+                              ( {...ans,
+                                isHeld:ans.id===ID? !ans.isHeld:false
+                                  }
+                              ))
+                        } )
+                  :item
+                   ))
+    }
 
       const checkAnswer=()=>{
-            setTrivia(prev=>prev.map((trivia):TriviaItem=> (
+            setTrivia(prev=>prev.map((item):TriviaItem=> (
                 
-                {...trivia,
-                  answeredCorrectly:trivia.answers.filter(({isHeld})=>isHeld)[0].isCorrect?
+                {...item,
+                  answeredCorrectly:item.answers.filter(({isHeld,isCorrect}:Answer)=>isHeld&&isCorrect)[0]?
                   true:false
                 })  
              ))
                 
       }
 
-      const isAnswered = trivia.every((triviaItem) => triviaItem.answers.some((answer) => answer.isHeld)
-            )
+      const isAnswered = trivia.every((triviaItem) => triviaItem.answers.some((answer) => answer.isHeld))
 
       const resetScore:()=>void=()=>setScore(0)
       const incrementScore:()=>void=()=>setScore(prev=>prev+1)
       const getScore:()=>void = () =>{
-            trivia.forEach( ({answers})=> answers.filter(  ({isHeld,isCorrect})=>isHeld&& isCorrect)[0] && incrementScore() )
+            trivia.forEach( ({answers})=> 
+                answers.filter(  ({isHeld,isCorrect})=>
+                    isHeld&& isCorrect)[0] && incrementScore() )
            
             } 
-         
-
-          
 
             return { form,url,trivia ,handleChange,endGame,startGame,finishGame,newGame,holdAnswer,checkAnswer,score,getScore,isAnswered,isLoading }
  }

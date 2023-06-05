@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 type questionType = {
     question:string
     questionNum:number
@@ -6,7 +8,11 @@ type questionType = {
 
 const Question = ({question,questionNum,category}: questionType) => {
   return (
-    <p>Q{questionNum}: Category:{category} {question}</p>
+    <Fragment>
+    <p>Q{questionNum}: Category: {category} </p>
+    
+    <p>{question}</p>
+    </Fragment>
   )
 }
 
