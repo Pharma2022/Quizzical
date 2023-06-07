@@ -11,18 +11,17 @@ const Quiz = () => {
     
    
     return (
-      <div className='quiz container flex-col'>
+    
         <div className='quiz-trivia flex-col'>
-          <Title />
+
           {isLoading? 
-            <Spinner/>
-          : <Trivia/>}
+            <Spinner/> : <Trivia/>}
           {endGame &&
             <Score/>}
-          {!isLoading &&
-            <QuizButton />}
+          {!isLoading ?
+            <QuizButton/>:null}
         </div>
-      </div>
+     
     );
   };
   export default Quiz

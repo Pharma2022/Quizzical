@@ -14,7 +14,7 @@ const Modal: FC = () => {
 
   return (
           <div className='modal flex-col'>
-              <Title/>
+           
               <form className='quiz-form container flex-col'>
                 <Input
                   name='length'

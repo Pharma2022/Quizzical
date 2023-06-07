@@ -68,15 +68,16 @@ const useGlobal = () => {
     } ,[length,category,difficulty]) 
     
     useEffect (  ()=>{
-      setTrivia([])
-      const setQuestions= async ()=>{
-        const res=       await fetch(url)
-        const {results}= await res.json()
-        setTrivia((triviaSetter(results))) 
-      }
+      clearQuestions()
       setQuestions() 
     },[url])
     
+    const setQuestions= async ()=>{
+      const res=       await fetch(url)
+      const {results}= await res.json()
+      setTrivia((triviaSetter(results))) 
+    }
+    const clearQuestions:()=>void=()=>setTrivia([])
     const clearForm=()=>setForm(emptyForm)
         
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -85,6 +86,8 @@ const useGlobal = () => {
         }
         
     const startGame=()=>{
+          clearQuestions()
+          setQuestions()
           setEndGame(false)
           setIsLoading(true)
           setTimeout(() => {
