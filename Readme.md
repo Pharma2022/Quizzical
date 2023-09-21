@@ -14,7 +14,9 @@ See [Demo](https://get-quizzical.netlify.app/)
 - React Spinner whilst page is loading
 - React Context to reduce prop drilling
 
-
+###If you wish to connect with me or find out more about my projects you can:
+- Visit my [linkedin]()
+- View my [portfolio](https://shahs-portfolio.netlify.app/) 
 
 ## Stretch goals
 - I coded this using typescript. My typescript experience is limited but I would like to use it more
