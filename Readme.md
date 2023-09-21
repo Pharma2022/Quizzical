@@ -14,10 +14,6 @@ See [Demo](https://get-quizzical.netlify.app/)
 - React Spinner whilst page is loading
 - React Context to reduce prop drilling
 
-###If you wish to connect with me or find out more about my projects you can:
-- Visit my [linkedin]()
-- View my [portfolio](https://shahs-portfolio.netlify.app/) 
-
 ## Stretch goals
 - I coded this using typescript. My typescript experience is limited but I would like to use it more
 - Used React Spinner whilst the Quizapp is loading
@@ -28,3 +24,7 @@ See [Demo](https://get-quizzical.netlify.app/)
 - To add a dark mode as I have done with several of my react apps 
 - To improve the design of the initial trivia screen
 - To refactor the Global Context into smaller components 
+
+### If you wish to connect with me or find out more about my projects you can:
+- Visit my [linkedin]()
+- View my [portfolio](https://shahs-portfolio.netlify.app/) 
