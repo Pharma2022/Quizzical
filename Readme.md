@@ -7,7 +7,7 @@ See [Demo](https://get-quizzical.netlify.app/)
 ## Functionality
 - The initial page is used to set the the trivia in terms of category, difficulty and quiz length.
 - The quiz then loads and the user selects their choices and is not allowed to submit the quiz until an answer is selected for each question
-- the 
+- Finally when the answers are submitted the quiz is marked with the correct and incorrect answers highlighted.
 
 ## Libaries that have been used
 - React Router
