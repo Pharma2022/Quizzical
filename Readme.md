@@ -2,7 +2,7 @@
 
 This is a quiz application that uses a restful API from https://opentdb.com/api_config.php . There is no API key required.
 
-See [Demo] https://get-quizzical.netlify.app/
+See [Demo](https://get-quizzical.netlify.app/)
 
 # Functionality
 - The initial page is used to set the the trivia in terms of category, difficulty and quiz length.
