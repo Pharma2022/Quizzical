@@ -33,7 +33,7 @@ See [Demo](https://get-quizzical.netlify.app/)
 - To refactor the Global Context into smaller components 
 
 ### If you wish to connect with me or find out more about my projects you can:
-- Visit my [linkedin]()
+- Visit my [linkedin](https://www.linkedin.com/in/shah-aowal-17b59653/)
 - View my [portfolio](https://shahs-portfolio.netlify.app/)
 
 ## About Scrimba - where I gained my FrontEnd Knowledge
